@@ -1,0 +1,4 @@
+<h1>Appointment</h1>
+<h3><a href="/doctors/<%= @appt.doctor.id %>">Doctor</a>: <%= link_to @appt.doctor.name, doctor_path(@appt.doctor.id) %></h3>
+<h3><a href="/patients/<%= @appt.patient.id%>">Patient</a>: <%= link_to @appt.patient.name, patient_path(@appt.patient.id) %></h3>
+<p><strong>Date: </strong><%= @appt.date_time %></p>

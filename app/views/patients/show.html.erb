@@ -1,0 +1,8 @@
+<h1><%= @patient.name %></h1>
+<h4><%= @patient.name %> is <%= @patient.age %> years old.</h4>
+<ul>
+<% @patient.appointments.each do |p| %>
+<li>You have an <a href="/appointments/<%= p.id %>">appointment</a> with <%= link_to p.doctor.name, doctor_path(p.doctor.id) %> on <%= p.date_time %>.</li>
+<br>
+<% end %>
+</ul>
